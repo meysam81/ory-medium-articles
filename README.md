@@ -8,6 +8,8 @@ The complete series can be accessed from the link below.
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/engine/install/)
-- [Supervisord](http://supervisord.org/)
-- [Kratos](https://github.com/ory/kratos/releases/tag/v0.11.1)
+| Product | Version |
+| --- | --- |
+|[Docker](https://docs.docker.com/engine/install/) | ~23 |
+|[Supervisord](http://supervisord.org/) | >=4,<5 |
+|[Kratos](https://github.com/ory/kratos/releases/tag/v0.11.1) | >=0.11,<1 |
