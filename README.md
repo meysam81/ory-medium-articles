@@ -1,6 +1,10 @@
-# ory-medium-articles
+# Ory Products | Medium Article Series
 
-The code of my Medium article on Ory products
+The code of my Medium article on Ory products.
+
+The complete series can be accessed from the link below.
+
+<https://meysam.io/list/ory-authentication-authorization-3ffbec341355>
 
 ## Prerequisites
 
