@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Login</title>
+    <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Login</h1>
+    <form action="{{ action }}" method="{{ method }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+
+      {% for input in inputs %} {% if input.type == "submit" %}
+      <div class="field">
+        <button
+          type="{{ input.type }}"
+          name="{{ input.id }}"
+          value="{{ input.value }}"
+        >
+          {{ input.label }}
+        </button>
+      </div>
+
+      {% else %}
+
+      <div class="field">
+        <label for="{{ input.id }}">{{ input.label }}</label>
+        {% if input.required %}
+        <span class="required">*</span>
+        {% endif %}
+        <input
+          type="{{ input.type }}"
+          name="{{ input.id }}"
+        />
+      </div>
+      {% endif %} {% endfor %}
+    </form>
+    <a href="{{ url_for('registration') }}">Doesn't Have an Account? Sign Up!</a>
+    <br/>
+    <a href="{{ url_for('recovery') }}">Forgot your password? Recover!</a>
+  </body>
+</html>

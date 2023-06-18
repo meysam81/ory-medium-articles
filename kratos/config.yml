@@ -1,5 +1,5 @@
 # version is optional, but it is good practice to pin the version
-version: v0.11.1
+version: v0.13.0
 
 dsn: sqlite:///tmp/kratos.db?_fk=true
 
@@ -10,13 +10,20 @@ serve:
     base_url: http://localhost:4434/
 
 identity:
-  default_schema_id: users-v1
+  default_schema_id: default
   schemas:
-    - id: users-v1
-      url: https://raw.githubusercontent.com/ory/kratos/v0.11.1/contrib/quickstart/kratos/email-password/identity.schema.json
+    - id: default
+      url: file://./kratos/identity.schema.json
 
 selfservice:
-  default_browser_return_url: http://localhost:4457/
+  default_browser_return_url: http://localhost:3000/
+
+  flows:
+    error:
+      ui_url: http://localhost:3000/error
+
+    registration:
+      ui_url: http://localhost:3000/registration
 
 courier:
   smtp:

@@ -1,0 +1,28 @@
+repos:
+  - hooks:
+      - args:
+          - "--profile"
+          - black
+        id: isort
+        stages:
+          - commit
+    repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+  - hooks:
+      - args:
+          - "-ri"
+          - "--remove-all-unused-imports"
+          - "--remove-duplicate-keys"
+          - "--ignore-init-module-imports"
+          - "--remove-unused-variables"
+        id: autoflake
+        stages:
+          - commit
+    repo: https://github.com/PyCQA/autoflake
+    rev: v2.1.1
+  - hooks:
+      - id: black
+        stages:
+          - commit
+    repo: https://github.com/psf/black
+    rev: 23.3.0

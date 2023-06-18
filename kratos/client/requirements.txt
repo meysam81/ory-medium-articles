@@ -1,0 +1,4 @@
+pydantic<2
+fastapi<1
+cryptography<41
+
